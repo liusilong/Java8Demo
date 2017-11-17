@@ -1,17 +1,5 @@
 # Java8Demo
-   
-   
-```java
-    @Component(modules = {BackendModule.class, FrontendModule.class})
-         interface MyComponent {
-           MyWidget myWidget();
+#### 为何需要Lambda表达式
+- 在Java中我们无法将函数作为参数传递给一个方法，也无法声明一个返回函数的方法
+- 在JavaScript中，函数参数是一个函数，返回值是另一个函数的情况是非常常见的；JavaScript是一门非典型的函数式语言
 
-            @Component.Builder
-           interface Builder {
-             //一个没有参数的`build()`方法，返回MyComponent类型
-             MyComponent build();
-             Builder backendModule(BackendModule bm);
-             Builder frontendModule(FrontendModule fm);
-           }
-         }
-   
